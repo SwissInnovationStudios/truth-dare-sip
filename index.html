@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/truth-dare-sip/assets/logo-mark.png" />
+    <link rel="apple-touch-icon" href="/truth-dare-sip/assets/logo-mark.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+      // GitHub Pages SPA fallback: 404.html redirects to /?p=<encodedPath>.
+      // This restores the original path before the app boots.
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var encoded = params.get('p');
+        if (!encoded) return;
+
+        try {
+          var decoded = decodeURIComponent(encoded);
+          var base = window.location.pathname;
+          if (base.endsWith('/')) base = base.slice(0, -1);
+          window.history.replaceState(null, '', base + decoded);
+        } catch (_) {
+          // Ignore malformed URL
+        }
+      })();
+    </script>
+    <title>Truth Dare Sip</title>
+    <script type="module" crossorigin src="/truth-dare-sip/assets/index-VQ1Henhx.js"></script>
+    <link rel="stylesheet" crossorigin href="/truth-dare-sip/assets/index-BzflLbJA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

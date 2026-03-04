@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script type="text/javascript">
+      // GitHub Pages SPA fallback.
+      // Redirects unknown routes back to the app entry with the original path encoded.
+      (function () {
+        var base = '/truth-dare-sip/';
+        var fullPath = window.location.pathname;
+
+        // Remove the base from the current path so we can restore it later.
+        var relPath = fullPath.startsWith(base) ? fullPath.slice(base.length - 1) : fullPath;
+
+        var encoded = encodeURIComponent(relPath + window.location.search + window.location.hash);
+        window.location.replace(base + '?p=' + encoded);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
